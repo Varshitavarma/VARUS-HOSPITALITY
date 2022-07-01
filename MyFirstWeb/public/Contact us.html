@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="Style.css">
+<script>
+function validation(){
+	var name = document.getElementById("name").value;
+	var subject = document.getElementById("subject").value;
+	var phone= document.getElementById("phone").value;
+	var email = document.getElementById("email").value;
+	var message = document.getElementById("message").value;
+	var error_message = document.getElementById("error_message");
+	
+	
+	error_message.style.padding="10px";
+	
+	if(name.length<5){
+		text="Please Enter Valid Name";
+		error_message.innerHTML=text;
+		return false;
+	}
+	if(subject.length<10){
+		text="Please Enter Correct Subject";
+		error_message.innerHTML=text;
+		return false;
+	}
+	if(isNaN(phone) || phone.length!=10){
+		text="Please Enter Valid Phone Number";
+		error_message.innerHTML=text;
+		return false;
+	}
+	if(email.indexOf("@")==-1 || email.length<6){
+		text="Please Enter Valid Email";
+		error_message.innerHTML=text;
+		return false;
+	}
+	if(message.length<=100){
+		text="Please Enter More Than 50 Characters";
+		error_message.innerHTML=text;
+		return false;
+	}
+	alert("Form Submitted Successfully!")
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+
+<div class="wrapper">
+<h2>CONTACT US</h2>
+<div id="error_message"> </div>
+
+<form id="myform" onsubmit="return validation()">
+<div class="input_field">
+  <input type="text" placeholder="Name" id="name">
+  </div>
+<div class="input_field">
+  <input type="text" placeholder="Subject" id="subject">
+  </div>
+<div class="input_field">
+  <input type="text" placeholder="Phone" id="phone">
+  </div>
+  <div class="input_field">
+  <input type="text" placeholder="Email" id="email">
+  </div>
+  <div class="input_field">
+  <textarea id="message" placeholder="Message"></textarea>
+  </div>
+<div class="btn">
+ <input type="submit">
+ </div>
+ </form>
+</div>
+
+</body>
+</html>
+

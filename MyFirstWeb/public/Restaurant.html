@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BOOKING TABLE</title>
+</head>
+<style>
+*{
+box-sizing:
+border-box;
+padding: 0 ;
+margin:0;
+}
+.form-row{
+padding:5px;
+}
+body{
+font-family: 'Poppins', 
+sans-serif;
+}
+.banner{
+width: 100%;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(C:/Users/HCL_TSS/Downloads/mt.png)center/cover no-repeat;
+background-position: center top;
+background-size: cover;
+height: 100vh;
+color: white;
+position: fixed;
+display: flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color: #fff;
+padding-bottom:30px;
+}
+.card-container{
+display:grid;
+grid-template-column:700px700px;
+}
+.card img{
+background:url(C:\Users\HCL_TSS\DownloadsMicrosoftTeams-image.png)center/cover no-repeat;}
+.banner h2{
+padding-bottom:40px;
+margin-bottom:20px;}
+.card-cotent{
+background:#fff;
+height:330px;
+}
+.card-contet h3{
+text-align:center;
+color:black;
+padding:25px 0 10px 0;
+font-size: 26px;
+font-weight:500;
+}
+.back{
+background-color: rgba(253,253,253,0.3);
+padding:30px;
+}
+</style>
+<body>
+ <section class ="banner">
+<div class="back">
+ <h2>BOOK YOUR TABLE NOW</h2>
+ <div class="card-container">
+ <div class="card-img">
+ <!-- image here -->
+ </div>
+ 
+ <div class="card-content">
+ <h3>Reservation</h3>
+ <form>
+    <div class="form row">
+    <select name ="days">
+      <option value ="day-select">Select Day</option>
+      <option value ="sunday">Sunday</option>
+      <option value ="monday">Monday</option>
+      <option value ="tuesday">Tuesday</option>
+      <option value ="wednesday">Wednesday</option>
+      <option value ="thursday">Thursday</option>
+      <option value ="friday">Friday</option>
+      <option value ="saturday">Saturday</option>
+
+    </select>
+    
+    <Select name="hours">
+    <option value ="hour-select">Select Hour</option>
+    <option value="10">10:00</option>
+    <option value="12">12:00</option>
+    <option value="14">14:00</option>
+    <option value="16">16:00</option>
+    <option value="18">18:00</option>
+    <option value="20">20:00</option>
+    <option value="22">22:00</option>
+    </Select>
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    <div class="form-row">
+    <input type="text" placeholder="Full name">
+    </div>
+    <div class="form-row">
+    <input type="text" placeholder="PhoneNumber">
+    </div>
+    <div class ="form-row">
+    <input type="number"
+    placeholder="How Many Persons?" min="1">
+ <a href="file:///C:/Users/HCL_TSS/eclipse-workspace/MyFirstWeb/public/restaurantpayment.html"><input type="submit" value="BOOK TABLE" onclick="res()"></a>
+    <script>
+    function res(){
+    	 confirm("Do you want the table booked?");}
+    </script>
+    </div>
+   </div>
+ </section>
+</body>
+</html>

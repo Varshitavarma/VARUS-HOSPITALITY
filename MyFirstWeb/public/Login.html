@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-image : url("C:/Users/HCL_TSS/Downloads/img.jpg");
+background-size : cover;
+background-repeat:no-repeat;
+}
+.container {
+width : 500px;
+margin : auto;
+margin-top : 100px;
+text-align:center;
+}
+.username{
+color : white;
+}
+.username2{
+padding : 20px;
+border-radius : 30px;
+width : 450px;
+}
+.password{
+padding : 20px;
+border-radius : 30px;
+width: 450px;
+}
+.password3{
+color : rgb(255, 253, 255);
+}
+.submit {
+width:140px;
+padding:15px;
+margin:40px;
+border-radius:33px;
+border:1;
+background-color:limegreen;
+color:white;
+}
+.submit:hover{
+background-color:white;
+color:black;
+border-color:beige;
+}
+.clickhere{
+color:skyblue;
+}
+
+.row {
+  background-color:  rgba(128, 128, 128, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 2em 2em 0.5em;
+  width: 50% ;
+  height: 20%;
+  margin: 3em    auto;
+  border-radius: 5px; }
+  
+ .footer  {
+    color: #ffffff;
+    text-decoration: none; }
+
+
+</style>
+<meta charset="UTF-8">
+<title>Login Page</title>
+</head>
+<body class="body">
+<script>
+function success()
+{
+confirm("Do you want to cofirm your login with these credentials? ");
+}
+</script>
+<table border="3" bgcolor="white" opacity="70%"><div class= "row">
+<div class="container">
+<h2 class="username">Username</h2>
+<div><input type="text" class="username2" placeholder="Enter your username"></div>
+<h2 class="password2">Password</h2>
+<div><input type="password" class="password" placeholder="Enter your password"></div>
+
+<a href="file:///C:/Users/HCL_TSS/eclipse-workspace/MyFirstWeb/public/looggeeedddin.html">
+<input type="button" value="Submit" class="submit" onClick="success()">
+</a>
+<h3 class="footer"><a href="file:///C:/Users/HCL_TSS/eclipse-workspace/MyFirstWeb/public/Forgetpassword.html#">Forgot password?</a></h3>
+<h3 class="password2">New to our website? Wanna become our registered user?<br>
+<a href="file:///C:/Users/HCL_TSS/eclipse-workspace/MyFirstWeb/public/Sign%20up.html" class="clickhere">Sign up now!!</a>
+</h3>
+</table>
+</div>
+</div>
+</body>
+</html>

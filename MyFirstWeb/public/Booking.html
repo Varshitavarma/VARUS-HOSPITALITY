@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+ 
+
+    <html lang="en">
+
+ 
+
+        <head>
+
+ 
+
+            <meta charset="UTF-8">
+
+ 
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ 
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+            <title>Room Booking Portal </title>
+
+ 
+
+ 
+
+ 
+
+<!-------------------------CSS STRATS FROM HERE IN STYLE TAG--------------------------------->
+
+ 
+
+            <style>  
+
+ 
+
+                *{
+
+ 
+
+                    box-sizing: border-box;
+
+ 
+
+                    margin: 0;
+
+ 
+
+                    padding: 0;
+
+ 
+
+                }
+
+ 
+
+                body{
+
+ 
+
+                    font-family: 'Poppins', sans-serif;
+
+ 
+
+                }
+
+ 
+
+                /*background image css*/
+
+ 
+
+                .bg{
+
+ 
+
+                    width: 100%;
+
+ 
+
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://ik.imagekit.io/g7q35o9sd/image_XhBAfyDvH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653760441603');
+
+ 
+
+                    background-position: center top;
+
+ 
+
+                    background-size: cover;
+
+ 
+
+                    height: 100vh;
+
+ 
+
+                    color: white;
+
+ 
+
+                    position: fixed;
+
+ 
+
+                }
+
+ 
+
+                /*form css*/
+
+ 
+
+                .form-div{
+
+ 
+
+                    background-color: teal;
+
+ 
+
+                    color: #FFF;
+
+ 
+
+                    margin-top: 70px;
+
+ 
+
+                    margin-left: 300px;
+
+ 
+
+                    height: 500px;
+
+ 
+
+                    width: 50%;
+
+ 
+
+                    border-radius: 20px;
+
+ 
+
+                    position: relative;
+
+ 
+
+                    padding: 20px;
+
+ 
+
+                    text-align: center;
+
+ 
+
+                }
+
+ 
+
+                .form-div h1{
+
+ 
+
+                    border: 2px ridge #fff;
+
+ 
+
+                    padding: 10px;
+
+ 
+
+                    border-radius: 5px;
+
+ 
+
+                }
+
+ 
+
+                .form-div form{
+
+ 
+
+                    display: grid;
+
+ 
+
+                    padding: 20px;
+
+ 
+
+                }
+
+ 
+
+                #location{
+
+ 
+
+                    height: 25px;
+
+ 
+
+                    width: 200px;
+
+ 
+
+                    border-radius: 5px;
+
+ 
+
+                    border: none;
+
+ 
+
+                    padding: 5px;
+
+ 
+
+                }
+
+ 
+
+                .form-div h2{
+
+ 
+
+                    margin: 20px;
+
+ 
+
+                }
+
+ 
+
+                #arr_time, #dep_time, #days, #nights, #adults, #children{
+
+ 
+
+                    float: right;
+
+ 
+
+                    height: 25px;
+
+ 
+
+                    width: 200px;
+
+ 
+
+                    border-radius: 5px;
+
+ 
+
+                    border: none;
+
+ 
+
+                    padding: 5px;
+
+ 
+
+                    margin-right: 100px;
+
+ 
+
+                }
+
+ 
+
+                #dep_time, #days, #nights, #adults, #children{
+
+ 
+
+                    margin-top: 10px;
+
+ 
+
+                }
+
+ 
+
+                #btn{
+
+ 
+
+                    margin-top: 20px;
+
+ 
+
+                    padding: 10px;
+
+ 
+
+                    width: 100px;
+
+ 
+
+                    border-radius: 20px;
+
+ 
+
+                    border: none;
+
+ 
+
+                    cursor: pointer;
+
+ 
+
+                }
+
+ 
+
+            </style>
+             <!-------------------------CSS ENDS HERE -------------------------------->
+
+ 
+
+ 
+
+ 
+
+        </head>
+
+ 
+
+        <body>
+        <script>
+        function room(){
+            confirm("you have been booked up successfully! Now,move to payment page!:)");
+        }
+        </script>
+
+ 
+
+            <!--background image-->
+
+ 
+
+            <div class="bg">
+
+ 
+
+ 
+
+ 
+
+            <!--form-->
+
+ 
+
+            <div class="form-div">
+
+ 
+
+                <h1>Welcome to VARUS Room Booking System</h1>
+
+ 
+
+                <form action="">
+
+ 
+
+                    <label for="location">Location :
+
+ 
+
+                        <select type="text" id="location" name="location">
+
+ 
+
+                            <option placeholder="Enter Your Desired Location">Enter Your Desired Location</option>
+
+ 
+
+<option value="New Delhi">New Delhi</option>
+
+ 
+
+<option value="Mumbai">Mumbai</option>
+
+ 
+
+<option value="Bangalore">Bangalore</option>
+
+ 
+
+<option value="Hyderabad">Hyderabad</option>
+
+ 
+
+<option value="Chennai">Chennai</option>
+
+ 
+
+<option value="Kolkata">Kolkata</option>
+
+ 
+
+<option value="Jammu">Jammu</option>
+
+ 
+
+<option value="Lucknkow">Lucknow</option>
+
+ 
+
+<option value="Shimla">Shimla</option>
+
+ 
+
+</select>
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <h2>Room Preference</h2>
+
+ 
+
+                    <label class="box" for="arr_time">Arrival Time :
+
+ 
+
+                        <input type="time" id="arr_time" name="arr_time">
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <label class="box" for="dep_time">Departure Time :
+
+ 
+
+                        <input type="time" id="dep_time" name="dep_time">
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <label class="box" for="days">Days :
+
+ 
+
+                        <input type="number" id="days" name="days" >
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <label class="box" for="nights">Nights :
+
+ 
+
+                        <input type="number" id="nights" name="nights">
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <label class="box" for="adults">Adults :
+
+ 
+
+                        <input type="number" id="adults" name="adults">
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                    <label class="box" for="children">Children :
+
+ 
+
+                        <input type="number" id="children" name="children">
+
+ 
+
+                    </label>
+
+ 
+
+ 
+
+ 
+
+                 <div>  <a href="file:///C:/Users/HCL_TSS/eclipse-workspace/MyFirstWeb/public/Payment.html" target="_blank"><input id="btn" type="button" value="Submit"onclick="room()"></a>
+
+ 
+
+         
+        
+         
+         
+                  </form>
+
+ 
+
+                </div>
+
+ 
+
+            </div>
+
+ 
+
+        </body>
+
+ 
+
+    </html>
